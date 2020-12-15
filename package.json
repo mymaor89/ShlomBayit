@@ -1,0 +1,20 @@
+{
+  "name": "create-react-app",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "4.11.2",
+    "clsx": "latest",
+    "markdown-to-jsx": "7.1.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest"
+  }
+}
