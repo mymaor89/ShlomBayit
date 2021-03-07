@@ -15,6 +15,7 @@
     "markdown-to-jsx": "7.1.0",
     "react": "latest",
     "react-dom": "latest",
+    "react-intl": "5.13.2",
     "react-scripts": "latest"
   }
 }

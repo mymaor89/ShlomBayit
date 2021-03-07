@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     flex: 1
   },
   cardMedia: {
-    width: 160
+    width: '160px',
+    height: 'auto'
   }
 })
 
@@ -41,7 +42,7 @@ export default function FeaturedPost(props) {
                 {post.description}
               </Typography>
               <Typography variant="subtitle1" color="primary">
-                Continue reading...
+                המשך לקרוא...
               </Typography>
             </CardContent>
           </div>

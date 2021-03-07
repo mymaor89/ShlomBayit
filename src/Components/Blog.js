@@ -33,7 +33,7 @@ const mainFeaturedPost = {
   title: 'האם יש פתרון קסמים?',
   description:
     'מה ההבדל בין זוגות שחיים יחד באהבה שנים רבות לזוגות שכל הזמן רבים',
-  image: 'https://source.unsplash.com/random',
+  image: 'https://source.unsplash.com/800x200/?couple',
   imgText: 'main image description',
   linkText: 'המשך לקרוא…'
 }
@@ -43,7 +43,7 @@ const featuredPosts = [
     title: '50 טיפים מעשיים שיבטיחו לכם חיי נישואים מאושרים וארוכים',
     date: 'Nov 12',
     description: 'בחרנו רק את הטיפים הטובים ביותר שיבטיחו לכם חיים מאושרים.',
-    image: 'https://source.unsplash.com/random',
+    image: 'https://source.unsplash.com/200x300/?couple',
     imageText: 'Image Text'
   },
   {
@@ -51,12 +51,12 @@ const featuredPosts = [
     date: 'Nov 11',
     description:
       'מעוניים לפתוח דף חדש, כיצד נשאיר את הריבים המכוערים מאחור ונתחיל מחדש',
-    image: 'https://source.unsplash.com/random',
+    image: 'https://source.unsplash.com/200x300/?couple,wedding',
     imageText: 'Image Text'
   }
 ]
 
-const posts = [post1, post2, post3]
+const posts = [post1]
 
 const sidebar = {
   title: 'אודותינו',
@@ -96,7 +96,7 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="מאמרים בנושא שלום בית" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
