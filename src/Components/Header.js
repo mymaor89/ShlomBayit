@@ -1,13 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
-import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import SearchIcon from '@material-ui/icons/Search'
-import Typography from '@material-ui/core/Typography'
-import Link from '@material-ui/core/Link'
-
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import SearchIcon from "@material-ui/icons/Search";
+import Typography from "@material-ui/core/Typography";
+import LanguageSelector from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
+import { Link as RouterLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`
@@ -16,23 +17,26 @@ const useStyles = makeStyles((theme) => ({
     flex: 1
   },
   toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto'
+    justifyContent: "space-between",
+    overflowX: "auto"
   },
   toolbarLink: {
     padding: theme.spacing(1),
-    flexShrink: 0
+    flexShrink: 0,
+    color: "inherit",
+    textDecoration: "none"
   }
-}))
+}));
 
 export default function Header(props) {
-  const classes = useStyles()
-  const { sections, title } = props
-
+  const classes = useStyles();
+  const { t } = useTranslation();
+  const { sections } = props;
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button size="small">עקוב</Button>
+        <Button size="small">{t("follow")}</Button>
+        <LanguageSelector />
         <Typography
           component="h2"
           variant="h5"
@@ -41,13 +45,13 @@ export default function Header(props) {
           noWrap
           className={classes.toolbarTitle}
         >
-          {title}
+          {t("title")}
         </Typography>
         <IconButton>
           <SearchIcon />
         </IconButton>
         <Button variant="outlined" size="small">
-          הירשם
+          {t("subscribe")}
         </Button>
       </Toolbar>
       <Toolbar
@@ -56,23 +60,22 @@ export default function Header(props) {
         className={classes.toolbarSecondary}
       >
         {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
+          <RouterLink
+            to={section.url}
             className={classes.toolbarLink}
+            // color="inherit"
+            key={t([`sections.${section.title}`])}
+            // variant="body2"
           >
-            {section.title}
-          </Link>
+            {t([`sections.${section.title}`])}
+          </RouterLink>
         ))}
       </Toolbar>
     </React.Fragment>
-  )
+  );
 }
 
 Header.propTypes = {
   sections: PropTypes.array,
   title: PropTypes.string
-}
+};

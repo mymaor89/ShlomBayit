@@ -9,13 +9,18 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@material-ui/core": "latest",
+    "@material-ui/core": "4.11.3",
     "@material-ui/icons": "4.11.2",
     "clsx": "latest",
+    "duration": "0.2.2",
+    "i18next": "19.9.1",
+    "i18next-browser-languagedetector": "6.0.1",
+    "i18next-xhr-backend": "3.2.2",
     "markdown-to-jsx": "7.1.0",
     "react": "latest",
     "react-dom": "latest",
-    "react-intl": "5.13.2",
+    "react-i18next": "11.8.8",
+    "react-router-dom": "5.2.0",
     "react-scripts": "latest"
   }
 }

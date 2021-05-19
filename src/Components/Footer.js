@@ -1,19 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
-import Link from '@material-ui/core/Link'
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+import { useTranslation } from "react-i18next";
 
 function Copyright() {
+  const { t } = useTranslation();
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © 2020 '}
+      {"Copyright © 2020 "}
       <Link color="inherit" href="https://material-ui.com/">
-        מאור יצקן | עדן אדרי
-      </Link>{' '}
+        {t("creators")}
+      </Link>{" "}
     </Typography>
-  )
+  );
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -22,17 +24,16 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0)
   }
-}))
+}));
 
-export default function Footer(props) {
-  const classes = useStyles()
-  const { description, title } = props
-
+export default function Footer() {
+  const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
-          {title}
+          {t("title")}
         </Typography>
         <Typography
           variant="subtitle1"
@@ -40,15 +41,15 @@ export default function Footer(props) {
           color="textSecondary"
           component="p"
         >
-          {description}
+          {t("slogan")}
         </Typography>
         <Copyright />
       </Container>
     </footer>
-  )
+  );
 }
 
-Footer.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.string
-}
+// Footer.propTypes = {
+//   description: PropTypes.string,
+//   title: PropTypes.string
+// };
