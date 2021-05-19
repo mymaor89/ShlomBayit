@@ -3,6 +3,7 @@ import Blog from "./Components/Blog/Blog";
 import Quiz from "./Components/Quiz/Quiz";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Consulting from "./Components/Consulting/Consulting";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Lectures from "./Components/Lectures/Lectures";
 
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/blog" component={Blog} />
         <Route path="/quiz" component={Quiz} />
         <Route path="/lectures" component={Lectures} />
+        <Route path="/consulting" component={Consulting} />
       </Switch>
       <Route path="/" render={(props) => <Footer {...props} />} />
     </Router>

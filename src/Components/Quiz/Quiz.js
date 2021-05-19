@@ -96,7 +96,7 @@ class Quiz extends React.Component {
     } else {
       return (
         <div className="quiz">
-          <h1>{this.state.questions} </h1>
+          <h1 className="question">{this.state.questions} </h1>
           <span>{`Questions ${currentQuestion + 1}  out of ${
             quizData.questions.length
           }`}</span>
