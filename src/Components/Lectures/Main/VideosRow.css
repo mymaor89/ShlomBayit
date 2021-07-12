@@ -6,7 +6,7 @@
   padding: 10px 20px 10px 0;
 }
 .videos-row-container .row .videos-row-item {
-  display: flex;
+  display: inline-block;
 }
 
 .videos-row-container .row .videos-row-label {
@@ -14,13 +14,13 @@
   padding: 10px 0;
 }
 
-.videos-row-container .row .videos-row-label-channel {
-  display: flex;
+/* .videos-row-container .row .videos-row-label-channel {
+  display: block;
   justify-content: space-between;
-}
+} */
 
 .videos-row-container .row .videos-row-label-channel .left {
-  display: flex;
+  display: block;
   align-items: center;
 }
 .videos-row-container .row .videos-row-label-channel .left > * {

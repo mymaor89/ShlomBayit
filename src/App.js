@@ -1,5 +1,6 @@
 import React from "react";
 import Blog from "./Components/Blog/Blog";
+import Shop from "./Components/Shop/Shop";
 import Quiz from "./Components/Quiz/Quiz";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -24,7 +25,7 @@ export default function App() {
   const sections = [
     { title: "quiz", url: "/quiz" },
     { title: "lectures", url: "/lectures" },
-    { title: "books", url: "/books" },
+    { title: "shop", url: "/shop" },
     { title: "blog", url: "/blog" },
     { title: "consulting", url: "/consulting" }
   ];
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/quiz" component={Quiz} />
         <Route path="/lectures" component={Lectures} />
         <Route path="/consulting" component={Consulting} />
+        <Route path="/shop" component={Shop} />
       </Switch>
       <Route path="/" render={(props) => <Footer {...props} />} />
     </Router>

@@ -1,5 +1,6 @@
 .video {
   padding: 5px 20px 5px 0;
+  display: inline-block;
 }
 .video .thumbnail {
   position: relative;
@@ -21,6 +22,7 @@
 .video .title {
   font-weight: 700;
   margin: 10px 0;
+  overflow-wrap: break-word;
 }
 
 .video .channel {
@@ -46,4 +48,7 @@
   background: black;
   margin: 0px 5px;
   border-radius: 50%;
+}
+.video-row-item {
+  display: block;
 }

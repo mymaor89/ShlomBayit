@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider } from '@material-ui/core/styles'
-import App from './App'
-import theme from './theme'
-import './i18n'
+import React from "react";
+import ReactDOM from "react-dom";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@material-ui/core/styles";
+import App from "./App";
+import theme from "./theme";
+import "./i18n";
+import { Provider } from "react-redux";
+import "./index.css";
+import * as serviceWorker from "./serviceWorker";
+import store from "./store";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
@@ -12,5 +16,5 @@ ReactDOM.render(
     <CssBaseline />
     <App />
   </ThemeProvider>,
-  document.querySelector('#root')
-)
+  document.querySelector("#root")
+);

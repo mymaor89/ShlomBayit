@@ -65,7 +65,7 @@ const Video = (props) => {
   return (
     <div className="video">
       <div className="thumbnail">
-        <img src={thumbnail} />
+        <img src={thumbnail} alt={title} />
         <span className="length">{getLengthString(length)}</span>
       </div>
       <h4 className="title">{title}</h4>

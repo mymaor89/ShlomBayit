@@ -11,6 +11,8 @@
   "dependencies": {
     "@material-ui/core": "4.11.3",
     "@material-ui/icons": "4.11.2",
+    "@react-google-maps/api": "2.2.0",
+    "axios": "0.21.1",
     "bootstrap": "5.0.1",
     "clsx": "latest",
     "duration": "0.2.2",
@@ -20,8 +22,14 @@
     "markdown-to-jsx": "7.1.0",
     "react": "latest",
     "react-dom": "latest",
+    "react-google-charts": "3.0.15",
     "react-i18next": "11.8.8",
+    "react-paypal-button-v2": "2.6.3",
+    "react-redux": "7.2.4",
+    "react-responsive-carousel": "3.2.19",
     "react-router-dom": "5.2.0",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "redux-thunk": "2.3.0",
+    "socket.io-client": "4.1.3"
   }
 }
